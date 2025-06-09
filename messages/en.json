@@ -1,0 +1,14 @@
+{
+  "index": {
+    "name" : "Stephen Nguyen",
+    "button" : "Hire me",
+    "position": "Software Developer",
+    "greeting": "Hello, I'm",
+    "title": "Full-stack Developer",
+    "description": "I’m a fresh graduate in Software Engineering with 3 years of study and a 4-month internship. I build responsive, user-friendly interfaces using React and Next.js, and handle backend logic with Express.js and Laravel. Passionate about clean code, modern tech, and building meaningful digital experiences.",
+    "downloadCV": "Download CV"
+  },
+  "nav": {
+    "services" : "services"
+  }
+}

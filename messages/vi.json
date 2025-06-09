@@ -1,0 +1,14 @@
+{
+  "index": {
+    "name" : "Stephen Nguyễn",
+    "button" : "Liên hệ ngay",
+    "position": "Lập trình viên",
+    "greeting": "Xin chào, mình là",
+    "title": "Lập trình viên Full-stack",
+    "description": "Lập trình viên full-stack mới tốt nghiệp, từng thực tập 4 tháng trong môi trường thực tế. Tôi xây dựng giao diện web bằng React, Next.js, và triển khai backend với Express.js hoặc Laravel. Đam mê tạo ra sản phẩm web thân thiện, dễ dùng và có giá trị thực tiễn.",
+    "downloadCV": "Tải CV"
+  },
+  "nav": {
+    "services" : "dịch vụ"
+  }
+}

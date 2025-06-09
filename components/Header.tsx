@@ -4,8 +4,11 @@ import {Button} from '@/components/ui/button';
 // components
 import Nav from "@/components/Nav";
 import MobileNav from "@/components/MobileNav";
+import {useTranslations} from "next-intl";
 
 export default function Header() {
+    const t = useTranslations('index');
+
     return (
         <header className={'py-8 xl:py-12 '}>
             <div className="container flex justify-between items-center">
@@ -17,7 +20,7 @@ export default function Header() {
                 <div className="hidden xl:flex items-center gap-8">
                     <Nav/>
                     <Link href={'/contact'}>
-                        <Button>Hire me</Button>
+                        <Button>{t('button')}</Button>
                     </Link>
                 </div>
 
