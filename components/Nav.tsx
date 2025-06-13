@@ -2,34 +2,7 @@
 
 import Link from 'next/link';
 import {usePathname} from "next/navigation";
-
-const links = [
-    {
-        name: 'home',
-        vName: "trang chủ",
-        path: '/',
-    },
-    {
-        name: 'services',
-        vName: "dịch vụ",
-        path: '/services',
-    },
-    {
-        name: 'resume',
-        vName: "hồ sơ năng lực",
-        path: '/resume',
-    },
-    {
-        name: 'work',
-        vName: "dự án",
-        path: '/work',
-    },
-    {
-        name: 'contact',
-        vName: "liên hệ",
-        path: '/contact',
-    }
-]
+import {links} from '@/app/contants';
 
 export default function Nav() {
     const pathname = usePathname();
@@ -43,7 +16,7 @@ export default function Nav() {
             {links.map((link, index) => (
                 <Link key={index} href={link.path}
                       className={`${link.path === subPath && 'text-accent border-b-2 border-accent'} capitalize
-                       font-medium hover:text-accent transition-all `}> {locale === 'vi' ? link.vName : link.name}</Link>
+                       font-medium hover:text-accent transition-all `}>{locale === 'vi' ? link.vName : link.name}</Link>
             ))}
         </nav>
     );
