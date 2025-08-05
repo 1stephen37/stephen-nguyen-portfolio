@@ -4,22 +4,22 @@ import {usePathname} from "next/navigation";
 
 const stats = [
     {
-        num: 12,
-        text: "Years of experience",
-        vText: "Năm kinh nghiệm",
+        num: 3,
+        text: "Years of learning experience",
+        vText: "Năm học tập",
     },
     {
-        num: 26,
+        num: 2,
         text: "Project completed",
         vText: "Dự án hoàn thành",
     },
     {
-        num: 8,
+        num: 4,
         text: "Technologies mastered",
         vText: "Công nghệ thành thạo",
     },
     {
-        num: 500,
+        num: 1400,
         text: "Code commits",
         vText: "Lần cập nhật mã nguồn",
     }

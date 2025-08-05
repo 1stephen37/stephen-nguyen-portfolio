@@ -9,25 +9,25 @@ const services = [
     {
         num: "01",
         title: "Web development",
-        description: "Web development",
+        description: "Building responsive, fast, and scalable websites using modern technologies.",
         href: ""
     },
     {
         num: "02",
         title: "UI/UX design",
-        description: "Web development",
+        description: "Designing intuitive and visually appealing interfaces for a seamless user experience.",
         href: ""
     },
     {
         num: "03",
         title: "Logo design",
-        description: "Web development",
+        description: "Creating unique and memorable logos that represent your brand identity.",
         href: ""
     },
     {
         num: "04",
         title: "SEO",
-        description: "Web development",
+        description: "Optimizing websites to rank higher on search engines and attract more visitors.",
         href: ""
     }
 ]

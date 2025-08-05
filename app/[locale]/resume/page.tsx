@@ -9,7 +9,7 @@ import {motion} from 'framer-motion';
 
 const about = {
     title: "about me",
-    description: "about me dasdasdqeqwewqeqweqw",
+    description: "I am a passionate Fullstack Developer trained at FPT Polytechnic, where I graduated with outstanding academic achievements. Over the years, I have actively participated in various programming competitions at both local and national levels, continuously honing my skills and embracing new technologies. My solid foundation and real-world experience allow me to deliver high-quality web solutions from front to back.",
     info: [
         {
             fieldName: "Name",
@@ -17,15 +17,15 @@ const about = {
         },
         {
             fieldName: "Phone",
-            fieldValue: "(+40) 321 654 678",
+            fieldValue: "(+84) 338 015 137",
         },
         {
             fieldName: "Experience",
-            fieldValue: "12+ Years",
+            fieldValue: "4+ month",
         },
         {
-            fieldName: "Skype",
-            fieldValue: "luke.01",
+            fieldName: "Facebook",
+            fieldValue: "yahoo.Yasuo.09",
         },
         {
             fieldName: "Nationality",
@@ -49,32 +49,12 @@ const about = {
 const experience = {
     icon: "/assets/resume/badge.svg",
     title: "My experience",
-    description: "My experience",
     items: [
         {
             company: "Tien Phong CDS",
             position: "frontend developer",
-            duration: "2022 - Present"
-        },
-        {
-            company: "Tien Phong CDS",
-            position: "frontend developer",
-            duration: "2022 - Present"
-        },
-        {
-            company: "Tien Phong CDS",
-            position: "frontend developer",
-            duration: "2022 - Present"
-        },
-        {
-            company: "Tien Phong CDS",
-            position: "frontend developer",
-            duration: "2022 - Present"
-        },
-        {
-            company: "Tien Phong CDS",
-            position: "frontend developer",
-            duration: "2022 - Present"
+            duration: "9/2024 - 12/2024",
+            description: "Collaborated remotely with a development team to build a real-world project. Participated in regular online meetings to report progress and receive feedback from the client."
         }
     ]
 }
@@ -82,27 +62,21 @@ const experience = {
 const education = {
     icon: "/assets/resume/cap.svg",
     title: "My education",
-    description: "My education",
     items: [
         {
-            institution: "Online Course Platform",
-            degree: "Full Stack Web Development Bootcamp",
+            institution: "FPT Polytechnic",
+            degree: "Website Development",
+            duration: "2022 - 2025"
+        },
+        {
+            institution: "CodeLearn",
+            degree: "Java basic",
             duration: "2023"
         },
         {
-            institution: "Codecademy",
-            degree: "Front-End Track",
-            duration: "2022"
-        },
-        {
-            institution: "Online Course",
-            degree: "Programing Course",
-            duration: "2020 - 2021"
-        },
-        {
-            institution: "Tech Institute",
-            degree: "Certified Web Development",
-            duration: "2019"
+            institution: "CodeLearn",
+            degree: "C for beginners",
+            duration: "2023"
         },
     ]
 }
@@ -178,14 +152,14 @@ export default function Page() {
                         <TabsContent value={'experience'} className={'w-full'}>
                             <div className="flex flex-col gap-[30px] text-center xl:text-left ">
                                 <h3 className={'text-4xl font-bold'}>{experience.title}</h3>
-                                <p className={'max-w-[600px] text-white/60 mx-auto xl:mx-0 '}>{experience.description}</p>
                                 <ScrollArea className={'h-[480px] '}>
                                     <ul className={'grid grid-cols-1 lg:grid-cols-2 gap-[30px] '}>
                                         {experience.items.map((item, index) => (
                                             <li key={index}
-                                                className={'bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'}>
+                                                className={'bg-[#232329] min-h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'}>
                                                 <span className={'text-accent'}>{item.duration}</span>
-                                                <h3 className={'text-xl max-w-[260px] min-h-[60px] text-center lg:text-left'}>{item.position}</h3>
+                                                <h3 className={'text-xl max-w-[260px] min-h-[30px] text-center lg:text-left'}>{item.position}</h3>
+                                                <p className={'text-sm'}>{item.description}</p>
                                                 <div className={'flex items-center gap-3'}>
                                                     <span className={'w-[6px] h-[6px] rounded-full bg-accent'}></span>
                                                     <p className={'text-white/60'}>{item.company}</p>
@@ -199,14 +173,13 @@ export default function Page() {
                         <TabsContent value={'education'} className={'w-full'}>
                             <div className="flex flex-col gap-[30px] text-center xl:text-left ">
                                 <h3 className={'text-4xl font-bold'}>{education.title}</h3>
-                                <p className={'max-w-[600px] text-white/60 mx-auto xl:mx-0 '}>{education.description}</p>
                                 <ScrollArea className={'h-[480px] '}>
                                     <ul className={'grid grid-cols-1 lg:grid-cols-2 gap-[30px] '}>
                                         {education.items.map((item, index) => (
                                             <li key={index}
                                                 className={'bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'}>
                                                 <span className={'text-accent'}>{item.duration}</span>
-                                                <h3 className={'text-xl max-w-[260px] min-h-[60px] text-center lg:text-left'}>{item.degree}</h3>
+                                                <h3 className={'text-xl max-w-[260px] min-h-[30px] text-center lg:text-left'}>{item.degree}</h3>
                                                 <div className={'flex items-center gap-3'}>
                                                     <span className={'w-[6px] h-[6px] rounded-full bg-accent'}></span>
                                                     <p className={'text-white/60'}>{item.institution}</p>
@@ -246,7 +219,7 @@ export default function Page() {
                         <TabsContent value={'about'} className={'w-full text-center xl:text-left'}>
                             <div className="flex flex-col gap-[30px]">
                                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 ">{about.description}</p>
+                                <p className="max-w-[600px] xl:max-w-[900px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
                                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                                     {about.info.map((item, index) => (
                                         <li key={index} className={'flex items-center justify-center xl:justify-start gap-4'}>
