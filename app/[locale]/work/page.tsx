@@ -18,18 +18,21 @@ import WorkSliderBtn from "@/components/WorkSliderBtn";
 const projects = [
     {
         num: "01",
-        category: "frontend",
+        category: "Fullstack",
         title: `build website for online course business "Fsources"`,
-        description: "Project 1 description",
+        description: `Built a full-featured website for "Fsources", an online education business. The platform allows instructors to upload and manage courses, while learners can register, purchase courses, and track their learning progress. Key features include user authentication, video streaming, responsive UI, and a secure payment system.`,
         stack: [
             {
-                name: "Html 5"
+                name: "NextJS"
             },
             {
-                name: "Css 3"
+                name: "Laravel"
             },
             {
-                name: "JavaScript"
+                name: "Tailwindcss"
+            },
+            {
+                name: "Docker"
             }
         ],
         image: '/assets/work/thumb1.png',
@@ -38,6 +41,26 @@ const projects = [
     },
     {
         num: "02",
+        category: "fullstack",
+        title: `build website for online business "Fasco shop"`,
+        description: "Project 2 description",
+        stack: [
+            {
+                name: "Next.js"
+            },
+            {
+                name: "Tailwind.css"
+            },
+            {
+                name: "Node.js"
+            }
+        ],
+        image: '/assets/work/thumb2.png',
+        live: "",
+        github: ""
+    },
+    {
+        num: "03",
         category: "fullstack",
         title: "project 2",
         description: "Project 2 description",
@@ -55,7 +78,7 @@ const projects = [
         image: '/assets/work/thumb2.png',
         live: "",
         github: ""
-    },
+    }
 ]
 // const [project, setProject] = useState(projects[0]);
 

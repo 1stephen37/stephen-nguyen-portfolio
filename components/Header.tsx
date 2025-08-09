@@ -19,9 +19,13 @@ export default function Header() {
                 {/*desktop nav & hire me button */}
                 <div className="hidden xl:flex items-center gap-8">
                     <Nav/>
-                    <Link href={'/contact'}>
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&to=stephennguyendev97@gmail.com&su=Chủ đề&body=Nội dung"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <Button>{t('button')}</Button>
-                    </Link>
+                    </a>
                 </div>
 
                 {/*mobile nav*/}
