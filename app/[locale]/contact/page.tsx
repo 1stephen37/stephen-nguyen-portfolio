@@ -32,7 +32,7 @@ export default function Page() {
                         <form className={'flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl'}>
                             <h3 className={'text-4xl text-accent'}>{`Let's`} work together</h3>
                             <p className={'text-white/60'}>
-                                Have a question, a project in mind, or just want to say hello? Reach out using the form below. I'm always happy to hear from you!
+                                {`Have a question, a project in mind, or just want to say hello? Reach out using the form below. I'm always happy to hear from you!`}
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <Input type={'text'} placeholder={'FirstName'}/>
