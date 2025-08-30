@@ -7,13 +7,12 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {Swiper as SwiperType} from 'swiper';
 import "swiper/css";
 
-import {BsArrowRight, BsGithub} from "react-icons/bs";
-
 import {Tooltip, TooltipTrigger, TooltipContent, TooltipProvider} from "@/components/ui/tooltip";
 
 import Link from 'next/link';
 import Image from 'next/image';
 import WorkSliderBtn from "@/components/WorkSliderBtn";
+import {AiFillGithub, AiFillGitlab} from "react-icons/ai";
 
 const projects = [
     {
@@ -33,37 +32,50 @@ const projects = [
             },
             {
                 name: "Docker"
-            }
+            },
+            {
+                name: "PostgreSQL"
+            },
         ],
         image: '/assets/work/thumb1.png',
         live: "",
-        github: ""
+        github: "",
+        frontend: "",
+        backend: ""
     },
     {
         num: "02",
         category: "fullstack",
         title: `build website for online business "Fasco shop"`,
-        description: "Project 2 description",
+        description: "Fasco Shop is an online clothing store designed to provide customers with a seamless shopping experience. This project focuses on creating a visually appealing and user-friendly website that showcases a variety of clothing items. The site is built using modern technologies to ensure performance, responsiveness, and ease of use.",
         stack: [
             {
-                name: "Next.js"
+                name: "Angular"
             },
             {
-                name: "Tailwind.css"
+                name: "Tailwindcss"
             },
             {
-                name: "Node.js"
-            }
+                name: "NodeJs"
+            },
+            {
+                name: "TypeScript"
+            },
+            {
+                name: "MySQL"
+            },
         ],
         image: '/assets/work/thumb2.png',
         live: "",
-        github: ""
+        github: "",
+        frontend: "https://github.com/1stephen37/Fasco_shop_angular",
+        backend: "https://github.com/1stephen37/backend_ts_fasco"
     },
     {
         num: "03",
         category: "fullstack",
-        title: "project 2",
-        description: "Project 2 description",
+        title: `build website for online smart phone business "STech"`,
+        description: "STech is an e-commerce platform designed for selling smartphones. The website features a user-friendly shopping cart system, allowing customers to easily add products. It includes functionality for managing smartphone specifications, such as memory and color options. STech ensures a seamless and efficient shopping experience.Project 2 description",
         stack: [
             {
                 name: "Next.js"
@@ -73,15 +85,21 @@ const projects = [
             },
             {
                 name: "Node.js"
+            },
+            {
+                name: "Express"
+            },
+            {
+                name: "PostgreSQL"
             }
         ],
-        image: '/assets/work/thumb2.png',
+        image: '/assets/work/thumb4.png',
         live: "",
-        github: ""
+        github: "",
+        frontend: "https://github.com/1stephen37/next_s_tech",
+        backend: "https://github.com/1stephen37/backend_s_tech"
     }
 ]
-// const [project, setProject] = useState(projects[0]);
-
 
 export default function Page() {
 
@@ -116,7 +134,7 @@ export default function Page() {
                                 <h2 className={`text-[42px] font-bold leading-none
                              text-white group-hover:text-accent transition-all duration-500 capitalize`}>{project.title}</h2>
                                 <p className="text-white/60">{project.description}</p>
-                                <ul className={'flex gap-4'}>
+                                <ul className={'flex flex-wrap gap-4'}>
                                     {project.stack.map((item, index) => (
                                         <li key={index} className={'text-xl text-accent'}>
                                             {item.name}{index !== project.stack.length - 1 && ','}
@@ -125,34 +143,38 @@ export default function Page() {
                                 </ul>
                                 <div className="border border-white/20"/>
                                 <div className="flex items-center gap-4">
-                                    <Link href={project.live}>
-                                        <TooltipProvider delayDuration={100}>
-                                            <Tooltip>
-                                                <TooltipTrigger
-                                                    className={'w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'}>
-                                                    <BsArrowRight
-                                                        className={'text-white text-3xl group-hover:text-accent'}/>
-                                                </TooltipTrigger>
-                                                <TooltipContent>
-                                                    Live project
-                                                </TooltipContent>
-                                            </Tooltip>
-                                        </TooltipProvider>
-                                    </Link>
-                                    <Link href={project.github}>
-                                        <TooltipProvider delayDuration={100}>
-                                            <Tooltip>
-                                                <TooltipTrigger
-                                                    className={'w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'}>
-                                                    <BsGithub
-                                                        className={'text-white text-3xl group-hover:text-accent'}/>
-                                                </TooltipTrigger>
-                                                <TooltipContent>
-                                                    Github repository
-                                                </TooltipContent>
-                                            </Tooltip>
-                                        </TooltipProvider>
-                                    </Link>
+                                    {project.frontend !== '' && (
+                                        <Link target={'_blank'} href={project.frontend}>
+                                            <TooltipProvider delayDuration={100}>
+                                                <Tooltip>
+                                                    <TooltipTrigger
+                                                        className={'w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'}>
+                                                        <AiFillGithub
+                                                            className={'text-white text-3xl group-hover:text-accent'}/>
+                                                    </TooltipTrigger>
+                                                    <TooltipContent>
+                                                        Frontend repository
+                                                    </TooltipContent>
+                                                </Tooltip>
+                                            </TooltipProvider>
+                                        </Link>
+                                    )}
+                                    {project.backend !== '' && (
+                                        <Link target={'_blank'} href={project.backend}>
+                                            <TooltipProvider delayDuration={100}>
+                                                <Tooltip>
+                                                    <TooltipTrigger
+                                                        className={'w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'}>
+                                                        <AiFillGitlab
+                                                            className={'text-white text-3xl group-hover:text-accent'}/>
+                                                    </TooltipTrigger>
+                                                    <TooltipContent>
+                                                        Backend repository
+                                                    </TooltipContent>
+                                                </Tooltip>
+                                            </TooltipProvider>
+                                        </Link>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -162,11 +184,11 @@ export default function Page() {
                                 {projects.map((item, index) => (
                                     <SwiperSlide key={index}>
                                         <div
-                                            className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                                            className="h-[300px] md:h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                                             <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"/>
                                             <div className="relative w-full h-full">
                                                 <Image src={item.image} alt={''} fill sizes={'100'}
-                                                       className={'object-cover'}/>
+                                                       className={'object-contain md:object-cover'}/>
                                             </div>
                                         </div>
                                     </SwiperSlide>
