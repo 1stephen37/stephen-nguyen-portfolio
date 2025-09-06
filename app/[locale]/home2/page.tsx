@@ -68,7 +68,7 @@ export default function Page() {
                             <SiLogitechg className={'text-accent'}/>
                             <div className="">Tech Stack</div>
                         </div>
-                        <div className="flex gap-4 flex-wrap xl:justify-start justify-center ">
+                        <div className="flex gap-4 flex-wrap justify-center">
                             <TechItem icon={<FaNodeJs/>} name="Node.js"/>
                             <TechItem icon={<FaReact/>} name="React"/>
                             <TechItem icon={<SiTypescript/>} name="TypeScript"/>
