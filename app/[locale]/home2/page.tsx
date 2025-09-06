@@ -4,7 +4,7 @@ import StatItem from "@/components/StatItem";
 import TechItem from "@/components/TechItem";
 import {motion} from "framer-motion";
 import {useTranslations} from 'next-intl';
-import {FaNodeJs, FaReact, FaAws, FaDocker} from "react-icons/fa";
+import {FaNodeJs, FaReact, FaDocker} from "react-icons/fa";
 import {SiLogitechg, SiMongodb, SiTypescript} from "react-icons/si";
 import Photo2 from "@/components/Photo2";
 import RoleCard from "@/components/RoleCard";
@@ -73,7 +73,6 @@ export default function Page() {
                             <TechItem icon={<FaReact/>} name="React"/>
                             <TechItem icon={<SiTypescript/>} name="TypeScript"/>
                             <TechItem icon={<SiMongodb/>} name="MongoDB"/>
-                            <TechItem icon={<FaAws/>} name="AWS"/>
                             <TechItem icon={<FaDocker/>} name="Docker"/>
                         </div>
                     </div>
