@@ -100,5 +100,13 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #00ff99;
   }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  .animate-blink {
+    animation: blink 1s step-start infinite;
+  }
 }
 

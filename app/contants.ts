@@ -5,6 +5,11 @@ export const links = [
         path: '/',
     },
     {
+        name: 'home 2',
+        vName: "trang chủ 2",
+        path: '/home2',
+    },
+    {
         name: 'services',
         vName: "dịch vụ",
         path: '/services',
