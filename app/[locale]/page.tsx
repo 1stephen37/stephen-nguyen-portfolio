@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <section className={'h-full'}>
             <div className="container">
-                <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+                <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-20">
                     <div className="text-center xl:text-left order-2 xl:order-none">
                         <span className={'text-xl'}>{t('position')}</span>
                         <h1 className={'h1 mb-6'}>{t('greeting')}<br/> <span
@@ -37,6 +37,13 @@ export default function Home() {
                 </div>
             </div>
             <Stats/>
+            <div className="mx-auto w-max mt-8">
+                <a href="https://stech-static.vercel.app/" target={'_blank'} rel="noopener noreferrer">
+                    <Button>
+                        Demo Live Project
+                    </Button>
+                </a>
+            </div>
         </section>
     );
 }

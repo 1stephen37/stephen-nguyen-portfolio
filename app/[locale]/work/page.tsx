@@ -13,6 +13,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import WorkSliderBtn from "@/components/WorkSliderBtn";
 import {AiFillGithub, AiFillGitlab} from "react-icons/ai";
+import {BsArrowRight} from "react-icons/bs";
 
 const projects = [
     {
@@ -75,7 +76,7 @@ const projects = [
         num: "03",
         category: "fullstack",
         title: `build website for online smart phone business "STech"`,
-        description: "STech is an e-commerce platform designed for selling smartphones. The website features a user-friendly shopping cart system, allowing customers to easily add products. It includes functionality for managing smartphone specifications, such as memory and color options. STech ensures a seamless and efficient shopping experience.Project 2 description",
+        description: "STech is an e-commerce platform designed for selling smartphones. The website features a user-friendly shopping cart system, allowing customers to easily add products. It includes functionality for managing smartphone specifications, such as memory and color options. STech ensures a seamless and efficient shopping experience.",
         stack: [
             {
                 name: "Next.js"
@@ -94,7 +95,7 @@ const projects = [
             }
         ],
         image: '/assets/work/thumb4.png',
-        live: "",
+        live: "https://stech-static.vercel.app/",
         github: "",
         frontend: "https://github.com/1stephen37/next_s_tech",
         backend: "https://github.com/1stephen37/backend_s_tech"
@@ -143,6 +144,22 @@ export default function Page() {
                                 </ul>
                                 <div className="border border-white/20"/>
                                 <div className="flex items-center gap-4">
+                                    {project.live !== '' && (
+                                        <Link href={project.live} target="_blank">
+                                            <TooltipProvider delayDuration={100}>
+                                                <Tooltip>
+                                                    <TooltipTrigger
+                                                        className={'w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'}>
+                                                        <BsArrowRight
+                                                            className={'text-white text-3xl group-hover:text-accent'}/>
+                                                    </TooltipTrigger>
+                                                    <TooltipContent>
+                                                        Live project
+                                                    </TooltipContent>
+                                                </Tooltip>
+                                            </TooltipProvider>
+                                        </Link>
+                                    )}
                                     {project.frontend !== '' && (
                                         <Link target={'_blank'} href={project.frontend}>
                                             <TooltipProvider delayDuration={100}>
