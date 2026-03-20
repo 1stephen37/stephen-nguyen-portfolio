@@ -35,13 +35,13 @@ export default function Page() {
                     experiences.
                 </p>
                 <TerminalCard/>
-                <div className="flex gap-4">
+                <div className="flex md:flex-row gap-4 flex-col justify-center items-center w-max mx-auto">
                     <Link target={'_blank'} href={'https://github.com/1stephen37'}>
                         <Button size={'lg'} className="">
                             View Github
                         </Button>
                     </Link>
-                    <a href={'/assets/resume/Stephen Nguyen CV start.pdf'} download>
+                    <a href={'/assets/resume/stephen_dev_cv_avanced.pdf.pdf'} download>
                         <Button variant={'outline'} size={'lg'} className={'uppercase flex items-center gap-2'}>
                             <span>{t('downloadCV')}</span>
                             <FiDownload className={'text-xl'}/>

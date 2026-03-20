@@ -19,7 +19,7 @@ export default function Home() {
                             {t('description')}
                         </p>
                         <div className="flex flex-col xl:flex-row items-center gap-8">
-                            <a href={'/assets/resume/Stephen Nguyen CV start.pdf'} download>
+                            <a href={'/assets/resume/stephen_dev_cv_avanced.pdf.pdf'} download>
                                 <Button variant={'outline'} size={'lg'} className={'uppercase flex items-center gap-2'}>
                                     <span>{t('downloadCV')}</span>
                                     <FiDownload className={'text-xl'}/>
