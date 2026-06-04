@@ -82,10 +82,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-primary text-white font-primary leading-loose;
+    @apply bg-primary text-white font-primary leading-loose overflow-x-hidden;
   }
   .h1 {
-    @apply font-semibold text-[48px] xl:text-[80px] leading-[1.1];
+    @apply font-semibold text-[36px] sm:text-[48px] xl:text-[80px] leading-[1.1];
   }
   .h2 {
     @apply font-semibold text-[36px] xl:text-[48px] leading-[1.1];

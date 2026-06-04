@@ -26,12 +26,12 @@ export default function Photo2() {
                             ease: 'easeInOut'
                         }
                     }}
-                    className="w-[298px] h-[298px] xl:w-[380px] xl:h-[380px] mix-blend-lighten absolute">
+                    className="w-full max-w-[298px] aspect-square xl:max-w-[380px] mix-blend-lighten absolute left-1/2 -translate-x-1/2 xl:left-auto xl:translate-x-0">
                     <Image src={'/assets/photo.png'} alt={''} priority quality={100} fill sizes={'100'}
                            className={'object-contain'}/>
                 </motion.div>
 
-                <motion.svg className={'w-[300px] xl:w-[400px] h-[300px] xl:h-[400px]'}
+                <motion.svg className={'w-full max-w-[300px] xl:max-w-[400px] aspect-square mx-auto'}
                             fill={"transparent"} viewBox="0 0 506 506" xmlns={'http://www.w3.org/2000/svg'}>
                     <motion.circle cx={"253"} cy={'253'} r={'250'} stroke={"#00ff99"} strokeWidth={'4'} strokeLinecap={'round'}
                                    strokeLinejoin={'round'}

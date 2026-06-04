@@ -1,14 +1,243 @@
 {
   "index": {
-    "name" : "Stephen Nguyễn",
-    "button" : "Liên hệ ngay",
+    "name": "Stephen Nguyễn",
+    "button": "Liên hệ ngay",
     "position": "Lập trình viên fullstack",
     "greeting": "Xin chào, mình là",
     "title": "Lập trình viên Full-stack",
     "description": "Lập trình viên full-stack mới tốt nghiệp, từng thực tập 4 tháng trong môi trường thực tế. Tôi xây dựng giao diện web bằng React, Next.js, và triển khai backend với Express.js hoặc Laravel. Đam mê tạo ra sản phẩm web thân thiện, dễ dùng và có giá trị thực tiễn.",
-    "downloadCV": "Tải CV"
+    "downloadCV": "Tải CV",
+    "demoLiveProject": "Xem dự án demo"
   },
   "nav": {
-    "services" : "dịch vụ"
+    "home": "trang chủ",
+    "home2": "trang chủ 2",
+    "services": "dịch vụ",
+    "resume": "hồ sơ năng lực",
+    "work": "dự án",
+    "contact": "liên hệ",
+    "mobileNavigation": "Menu điều hướng",
+    "switchLanguage": "Chuyển ngôn ngữ"
+  },
+  "stats": {
+    "yearsLearning": "Năm học tập",
+    "projectsCompleted": "Dự án hoàn thành",
+    "technologiesMastered": "Công nghệ thành thạo",
+    "codeCommits": "Lần cập nhật mã nguồn"
+  },
+  "home2": {
+    "viewGithub": "Xem Github",
+    "techStack": "Công nghệ sử dụng",
+    "studyYears": "Năm học tập",
+    "projectsCompleted": "Dự án hoàn thành",
+    "technologiesMastered": "Công nghệ thành thạo",
+    "role": "Lập trình viên Fullstack"
+  },
+  "terminal": {
+    "line1": "$ npm run dev --mode=production",
+    "line2": "> Đang build cho production...",
+    "line3": "> Server chạy tại https://localhost:3000",
+    "line4": "> Sẵn sàng kết nối! 🚀"
+  },
+  "services": {
+    "heading": "Dịch vụ",
+    "subtitle": "Từ ý tưởng đến sản phẩm hoàn chỉnh — tôi giúp doanh nghiệp và cá nhân xây dựng web hiện đại với code sạch, giao diện chỉn chu và bàn giao đáng tin cậy.",
+    "featuresLabel": "Bao gồm",
+    "learnMore": "Nhận báo giá",
+    "cta": {
+      "title": "Sẵn sàng bắt đầu dự án?",
+      "description": "Chia sẻ mục tiêu và thời gian của bạn. Tôi sẽ phản hồi với kế hoạch và ước tính rõ ràng.",
+      "button": "Liên hệ ngay"
+    },
+    "process": {
+      "title": "Quy trình làm việc",
+      "discover": {
+        "title": "Tìm hiểu",
+        "description": "Nắm rõ mục tiêu, người dùng và yêu cầu qua buổi trao đổi ngắn."
+      },
+      "build": {
+        "title": "Phát triển",
+        "description": "Code theo từng giai đoạn, cập nhật tiến độ và nhận phản hồi thường xuyên."
+      },
+      "deliver": {
+        "title": "Bàn giao",
+        "description": "Giao sản phẩm đã test kèm tài liệu và hỗ trợ triển khai."
+      }
+    },
+    "webDev": {
+      "title": "Phát triển web",
+      "description": "Ứng dụng web full-stack — từ landing page, thương mại điện tử đến hệ thống quản trị nội bộ.",
+      "features": [
+        "Giao diện responsive trên mobile, tablet và desktop",
+        "SSR/SSG với Next.js — nhanh và thân thiện SEO",
+        "Xác thực người dùng, thanh toán và tích hợp bên thứ ba",
+        "Code sạch, dễ bảo trì theo chuẩn hiện đại"
+      ]
+    },
+    "uiUx": {
+      "title": "Triển khai UI/UX",
+      "description": "Biến thiết kế thành giao diện mượt mà, dễ dùng và nhất quán trên mọi thiết bị.",
+      "features": [
+        "Triển khai chính xác từ mockup Figma",
+        "Thư viện component tái sử dụng với Tailwind CSS",
+        "Animation và micro-interaction tinh tế",
+        "Tối ưu accessibility và tương thích trình duyệt"
+      ]
+    },
+    "backend": {
+      "title": "Backend & API",
+      "description": "Logic phía server, REST API và thiết kế cơ sở dữ liệu vững chắc cho ứng dụng của bạn.",
+      "features": [
+        "Thiết kế REST API với Express.js hoặc Laravel",
+        "Mô hình dữ liệu PostgreSQL hoặc MySQL",
+        "Xác thực, phân quyền và bảo mật endpoint",
+        "Upload file, email và tích hợp dịch vụ bên ngoài"
+      ]
+    },
+    "devops": {
+      "title": "Triển khai & tối ưu",
+      "description": "Đưa sản phẩm lên production, giữ hiệu năng cao và dễ bảo trì lâu dài.",
+      "features": [
+        "Docker hóa và triển khai lên cloud",
+        "Tối ưu hiệu năng và Core Web Vitals",
+        "Thiết lập SEO cơ bản và metadata",
+        "Theo dõi, sửa lỗi và hỗ trợ sau bàn giao"
+      ]
+    }
+  },
+  "resume": {
+    "tabs": {
+      "experience": "Kinh nghiệm",
+      "education": "Học vấn",
+      "skills": "Kỹ năng",
+      "about": "Về tôi"
+    },
+    "about": {
+      "title": "về tôi",
+      "description": "Tôi là Lập trình viên Fullstack đam mê, được đào tạo tại FPT Polytechnic và tốt nghiệp với thành tích học tập xuất sắc. Qua các năm, tôi tích cực tham gia nhiều cuộc thi lập trình cấp trường và quốc gia, không ngừng rèn luyện kỹ năng và tiếp cận công nghệ mới. Nền tảng vững chắc cùng kinh nghiệm thực tế giúp tôi mang đến giải pháp web chất lượng cao từ frontend đến backend.",
+      "fields": {
+        "name": "Họ tên",
+        "phone": "Điện thoại",
+        "experience": "Kinh nghiệm",
+        "facebook": "Facebook",
+        "nationality": "Quốc tịch",
+        "email": "Email",
+        "freelance": "Freelance",
+        "languages": "Ngôn ngữ"
+      },
+      "values": {
+        "experience": "4+ tháng",
+        "freelance": "Sẵn sàng",
+        "languages": "Tiếng Anh, Tiếng Việt"
+      }
+    },
+    "experience": {
+      "title": "Kinh nghiệm làm việc",
+      "items": {
+        "tienPhong": {
+          "position": "lập trình viên frontend",
+          "description": "Làm việc remote cùng team phát triển để xây dựng dự án thực tế. Tham gia họp online định kỳ để báo cáo tiến độ và nhận phản hồi từ khách hàng."
+        }
+      }
+    },
+    "education": {
+      "title": "Học vấn",
+      "items": {
+        "fpt": {
+          "degree": "Phát triển Website"
+        },
+        "codeLearnJava": {
+          "degree": "Java cơ bản"
+        },
+        "codeLearnC": {
+          "degree": "C cho người mới bắt đầu"
+        }
+      }
+    },
+    "skills": {
+      "title": "Kỹ năng của tôi"
+    }
+  },
+  "work": {
+    "heading": "Dự án tiêu biểu",
+    "subtitle": "Gồm dự án tốt nghiệp nhóm, dự án cá nhân và bản clone giao diện — trình bày trung thực phần nào public, phần nào bảo mật, và mỗi dự án thể hiện kỹ năng gì.",
+    "featured": "Demo live",
+    "projectSuffix": "dự án",
+    "roleLabel": "Vai trò",
+    "highlightsLabel": "Điểm nổi bật",
+    "viewLive": "Xem UI demo",
+    "viewFrontend": "Frontend",
+    "viewBackend": "Backend",
+    "badges": {
+      "confidential": "Bảo mật",
+      "team": "Dự án nhóm",
+      "uiClone": "Clone UI"
+    },
+    "tooltips": {
+      "live": "Xem dự án live",
+      "frontend": "Kho mã frontend",
+      "backend": "Kho mã backend"
+    },
+    "projects": {
+      "fsources": {
+        "name": "Fsources",
+        "category": "Fullstack",
+        "title": "Đồ án tốt nghiệp — nền tảng khóa học trực tuyến",
+        "description": "Fsources là đồ án tốt nghiệp nhóm tại FPT Polytechnic — nền tảng khóa học online do nhiều thành viên cùng xây dựng. Mã nguồn và thông tin triển khai không công khai vì yêu cầu bảo mật của dự án.",
+        "role": "Lập trình viên Fullstack (thành viên nhóm)",
+        "previewLabel": "Dự án riêng tư — không có URL công khai",
+        "highlights": [
+          "Đồ án tốt nghiệp nhóm nhiều thành viên",
+          "Quản lý khóa học, xác thực và thanh toán",
+          "Next.js + Laravel, triển khai bằng Docker",
+          "Không deploy công khai — chi tiết được bảo mật"
+        ]
+      },
+      "fasco": {
+        "name": "Fasco Shop",
+        "category": "Fullstack",
+        "title": "Dự án e-commerce thời trang (học tập)",
+        "description": "Fasco Shop là dự án fullstack cá nhân — website bán quần áo để luyện Angular, Node.js và thiết kế database. Không có tên miền riêng; mã nguồn mở trên GitHub để tham khảo.",
+        "role": "Lập trình viên Fullstack",
+        "previewLabel": "Không có domain — chỉ trên GitHub",
+        "highlights": [
+          "Frontend Angular với Tailwind CSS",
+          "Backend Node.js + TypeScript, MySQL",
+          "Danh mục sản phẩm và luồng giỏ hàng",
+          "Mã nguồn trên GitHub, chưa deploy live"
+        ]
+      },
+      "stech": {
+        "name": "STech",
+        "category": "Frontend",
+        "title": "Clone giao diện tĩnh — cửa hàng điện thoại",
+        "description": "STech là bản showcase giao diện — clone UI trang bán smartphone bằng Next.js và Tailwind, deploy tĩnh trên Vercel để thể hiện layout, responsive và độ chỉn chu của UI. Không có backend hay giao dịch thật.",
+        "role": "Lập trình viên Frontend",
+        "previewLabel": "stech-static.vercel.app",
+        "highlights": [
+          "Clone UI tĩnh để showcase portfolio",
+          "Trang danh sách, chi tiết sản phẩm và giỏ hàng",
+          "Responsive với Next.js + Tailwind CSS",
+          "Demo live trên Vercel — không tích hợp backend"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Cùng hợp tác nhé",
+    "description": "Bạn có câu hỏi, ý tưởng dự án, hay chỉ muốn chào hỏi? Hãy liên hệ qua form bên dưới. Tôi luôn sẵn sàng lắng nghe!",
+    "firstName": "Họ",
+    "lastName": "Tên",
+    "email": "Địa chỉ email",
+    "phone": "Số điện thoại",
+    "selectService": "Chọn dịch vụ",
+    "services": {
+      "webDev": "Phát triển web",
+      "uiUx": "Triển khai UI/UX",
+      "backend": "Backend & API",
+      "devops": "Triển khai & tối ưu"
+    },
+    "message": "Nhập nội dung tin nhắn của bạn.",
+    "send": "Gửi tin nhắn"
   }
 }

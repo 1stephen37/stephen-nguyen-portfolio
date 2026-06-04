@@ -1,14 +1,243 @@
 {
   "index": {
-    "name" : "Stephen Nguyen",
-    "button" : "Hire me",
+    "name": "Stephen Nguyen",
+    "button": "Hire me",
     "position": "Software Developer",
     "greeting": "Hello, I'm",
     "title": "Full-stack Developer",
-    "description": "I’m a fresh graduate in Software Engineering with 3 years of study and a 4-month internship. I build responsive, user-friendly interfaces using React and Next.js, and handle backend logic with Express.js and Laravel. Passionate about clean code, modern tech, and building meaningful digital experiences.",
-    "downloadCV": "Download CV"
+    "description": "I'm a fresh graduate in Software Engineering with 3 years of study and a 4-month internship. I build responsive, user-friendly interfaces using React and Next.js, and handle backend logic with Express.js and Laravel. Passionate about clean code, modern tech, and building meaningful digital experiences.",
+    "downloadCV": "Download CV",
+    "demoLiveProject": "Demo Live Project"
   },
   "nav": {
-    "services" : "services"
+    "home": "home",
+    "home2": "home 2",
+    "services": "services",
+    "resume": "resume",
+    "work": "work",
+    "contact": "contact",
+    "mobileNavigation": "Mobile Navigation",
+    "switchLanguage": "Switch language"
+  },
+  "stats": {
+    "yearsLearning": "Years of learning experience",
+    "projectsCompleted": "Project completed",
+    "technologiesMastered": "Technologies mastered",
+    "codeCommits": "Code commits"
+  },
+  "home2": {
+    "viewGithub": "View Github",
+    "techStack": "Tech Stack",
+    "studyYears": "Study years",
+    "projectsCompleted": "Projects Completed",
+    "technologiesMastered": "Technologies mastered",
+    "role": "Fullstack Developer"
+  },
+  "terminal": {
+    "line1": "$ npm run dev --mode=production",
+    "line2": "> Building for production...",
+    "line3": "> Server running on https://localhost:3000",
+    "line4": "> Ready for connections! 🚀"
+  },
+  "services": {
+    "heading": "Services",
+    "subtitle": "From idea to production — I help businesses and individuals build modern web products with clean code, thoughtful design, and reliable delivery.",
+    "featuresLabel": "What's included",
+    "learnMore": "Get a quote",
+    "cta": {
+      "title": "Ready to start your project?",
+      "description": "Tell me about your goals and timeline. I'll get back to you with a clear plan and estimate.",
+      "button": "Contact me"
+    },
+    "process": {
+      "title": "How I work",
+      "discover": {
+        "title": "Discover",
+        "description": "Understand your goals, users, and requirements through a quick briefing."
+      },
+      "build": {
+        "title": "Build",
+        "description": "Develop iteratively with regular updates and room for feedback."
+      },
+      "deliver": {
+        "title": "Deliver",
+        "description": "Hand over a tested product with documentation and deployment support."
+      }
+    },
+    "webDev": {
+      "title": "Web development",
+      "description": "Full-stack web applications — from landing pages to e-commerce platforms and internal dashboards.",
+      "features": [
+        "Responsive layouts for mobile, tablet, and desktop",
+        "SSR/SSG with Next.js for performance and SEO",
+        "Authentication, payments, and third-party integrations",
+        "Clean, maintainable code with modern best practices"
+      ]
+    },
+    "uiUx": {
+      "title": "UI/UX implementation",
+      "description": "Turn designs into polished, accessible interfaces that feel fast and intuitive to use.",
+      "features": [
+        "Pixel-accurate implementation from Figma mockups",
+        "Reusable component libraries with Tailwind CSS",
+        "Smooth animations and micro-interactions",
+        "Accessibility and cross-browser compatibility"
+      ]
+    },
+    "backend": {
+      "title": "Backend & API",
+      "description": "Robust server-side logic, RESTful APIs, and database design to power your application.",
+      "features": [
+        "REST API design with Express.js or Laravel",
+        "Database modeling with PostgreSQL or MySQL",
+        "User auth, role management, and secure endpoints",
+        "File uploads, email, and external service integration"
+      ]
+    },
+    "devops": {
+      "title": "Deployment & optimization",
+      "description": "Get your product live, keep it fast, and make it easy to maintain over time.",
+      "features": [
+        "Docker containerization and cloud deployment",
+        "Performance tuning and Core Web Vitals",
+        "Basic SEO setup and metadata optimization",
+        "Monitoring, bug fixes, and ongoing support"
+      ]
+    }
+  },
+  "resume": {
+    "tabs": {
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "Skills",
+      "about": "About me"
+    },
+    "about": {
+      "title": "about me",
+      "description": "I am a passionate Fullstack Developer trained at FPT Polytechnic, where I graduated with outstanding academic achievements. Over the years, I have actively participated in various programming competitions at both local and national levels, continuously honing my skills and embracing new technologies. My solid foundation and real-world experience allow me to deliver high-quality web solutions from front to back.",
+      "fields": {
+        "name": "Name",
+        "phone": "Phone",
+        "experience": "Experience",
+        "facebook": "Facebook",
+        "nationality": "Nationality",
+        "email": "Email",
+        "freelance": "Freelance",
+        "languages": "Languages"
+      },
+      "values": {
+        "experience": "4+ month",
+        "freelance": "Available",
+        "languages": "English, VietNam"
+      }
+    },
+    "experience": {
+      "title": "My experience",
+      "items": {
+        "tienPhong": {
+          "position": "frontend developer",
+          "description": "Collaborated remotely with a development team to build a real-world project. Participated in regular online meetings to report progress and receive feedback from the client."
+        }
+      }
+    },
+    "education": {
+      "title": "My education",
+      "items": {
+        "fpt": {
+          "degree": "Website Development"
+        },
+        "codeLearnJava": {
+          "degree": "Java basic"
+        },
+        "codeLearnC": {
+          "degree": "C for beginners"
+        }
+      }
+    },
+    "skills": {
+      "title": "My skills"
+    }
+  },
+  "work": {
+    "heading": "Selected work",
+    "subtitle": "A mix of team graduation work, personal builds, and UI showcases — presented honestly with what's public, what's private, and what each project actually demonstrates.",
+    "featured": "Live demo",
+    "projectSuffix": "project",
+    "roleLabel": "My role",
+    "highlightsLabel": "Key highlights",
+    "viewLive": "View UI demo",
+    "viewFrontend": "Frontend repo",
+    "viewBackend": "Backend repo",
+    "badges": {
+      "confidential": "Confidential",
+      "team": "Team project",
+      "uiClone": "UI clone"
+    },
+    "tooltips": {
+      "live": "Live project",
+      "frontend": "Frontend repository",
+      "backend": "Backend repository"
+    },
+    "projects": {
+      "fsources": {
+        "name": "Fsources",
+        "category": "Fullstack",
+        "title": "Graduation capstone — online course platform",
+        "description": "Fsources was our team graduation project at FPT Polytechnic — a full online course platform built by multiple members. Source code and deployment details are kept private due to project security requirements.",
+        "role": "Fullstack Developer (team member)",
+        "previewLabel": "Private project — no public URL",
+        "highlights": [
+          "Multi-member graduation capstone project",
+          "Course management, auth, and payment flows",
+          "Next.js + Laravel with Docker deployment",
+          "Not publicly deployed — details under NDA"
+        ]
+      },
+      "fasco": {
+        "name": "Fasco Shop",
+        "category": "Fullstack",
+        "title": "Fashion e-commerce learning project",
+        "description": "Fasco Shop is a personal fullstack project — an online clothing storefront built to practice Angular, Node.js, and database design. No custom domain; code is available on GitHub for review.",
+        "role": "Fullstack Developer",
+        "previewLabel": "No public domain — GitHub only",
+        "highlights": [
+          "Angular storefront with Tailwind styling",
+          "Node.js + TypeScript backend with MySQL",
+          "Product catalog and shopping cart flow",
+          "Open-source on GitHub, no live deployment"
+        ]
+      },
+      "stech": {
+        "name": "STech",
+        "category": "Frontend",
+        "title": "Static UI clone — smartphone storefront",
+        "description": "STech is a front-end skill showcase — a static clone of a smartphone e-commerce interface built with Next.js and Tailwind. Deployed on Vercel to demonstrate layout, responsiveness, and UI polish. No real backend or transactions.",
+        "role": "Frontend Developer",
+        "previewLabel": "stech-static.vercel.app",
+        "highlights": [
+          "Static UI clone for portfolio demonstration",
+          "Product listing, detail pages, and cart layout",
+          "Responsive design with Next.js + Tailwind CSS",
+          "Live demo on Vercel — no backend integration"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's work together",
+    "description": "Have a question, a project in mind, or just want to say hello? Reach out using the form below. I'm always happy to hear from you!",
+    "firstName": "FirstName",
+    "lastName": "LastName",
+    "email": "Email address",
+    "phone": "Phone number",
+    "selectService": "Select a service",
+    "services": {
+      "webDev": "Web development",
+      "uiUx": "UI/UX implementation",
+      "backend": "Backend & API",
+      "devops": "Deployment & optimization"
+    },
+    "message": "Type your message here.",
+    "send": "Send message"
   }
 }

@@ -1,11 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
+import {useTranslations} from 'next-intl';
 
 export default function RoleCard() {
-    const fullText = '"Fullstack Developer"';
+    const t = useTranslations('home2');
+    const fullText = `"${t('role')}"`;
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        setDisplayedText("");
+        setIndex(0);
+    }, [fullText]);
 
     useEffect(() => {
         const startDelay = setTimeout(() => {
@@ -13,13 +20,13 @@ export default function RoleCard() {
                 const typing = setInterval(() => {
                     setDisplayedText((prev) => prev + fullText.charAt(prev.length));
                     setIndex((i) => i + 1);
-                }, 100); // tốc độ gõ (ms)
+                }, 100);
 
                 return () => clearInterval(typing);
             }
         }, 2500);
         return () => clearTimeout(startDelay);
-    }, [index]);
+    }, [index, fullText]);
 
     return (
         <div className="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden w-full border border-gray-700">
@@ -30,8 +37,7 @@ export default function RoleCard() {
                 <span className="ml-5">role.ts</span>
             </div>
 
-            {/* Code area */}
-            <div className="px-6 py-6 font-mono text-lg bg-[#0f172a] flex">
+            <div className="px-4 sm:px-6 py-4 sm:py-6 font-mono text-sm sm:text-lg bg-[#0f172a] flex flex-wrap">
                 <span className="text-sky-400">const</span>&nbsp;
                 <span className="text-orange-400">role</span>&nbsp;=
                 <span className="text-green-400">&nbsp;{displayedText}</span>

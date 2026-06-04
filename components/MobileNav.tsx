@@ -6,16 +6,19 @@ import {
     SheetTitle
 } from '@/components/ui/sheet';
 import {usePathname} from 'next/navigation';
-import Link from 'next/link';
+import {useTranslations} from 'next-intl';
+import {Link} from '@/i18n/navigation';
 import {CiMenuFries} from "react-icons/ci";
 import {VisuallyHidden} from '@radix-ui/react-visually-hidden';
 import {links} from '@/app/contants';
 
 export default function MobileNav() {
     const pathname = usePathname();
-    const parts = pathname.split('/'); // ['', 'vi', 'resume']
-    const locale = parts[1] || 'vi'; // fallback nếu rỗng
+    const t = useTranslations('nav');
+
+    const parts = pathname.split('/');
     const subPath = '/' + parts.slice(2).join('/');
+
     return (
         <Sheet>
             <SheetTrigger className="flex justify-center items-center">
@@ -23,7 +26,7 @@ export default function MobileNav() {
             </SheetTrigger>
             <SheetContent className="flex flex-col gap-4 pt-10">
                 <VisuallyHidden>
-                    <SheetTitle>Mobile Navigation</SheetTitle>
+                    <SheetTitle>{t('mobileNavigation')}</SheetTitle>
                 </VisuallyHidden>
 
                 <div className="mt-32 mb-40 text-center text-2xl font-bold">
@@ -40,7 +43,7 @@ export default function MobileNav() {
                                 link.path === subPath && 'text-accent border-b-2 border-accent'
                             }`}
                         >
-                            {locale === 'vi' ? link.vName : link.name}
+                            {t(link.key)}
                         </Link>
                     ))}
                 </nav>

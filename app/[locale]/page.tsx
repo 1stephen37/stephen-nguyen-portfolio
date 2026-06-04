@@ -1,7 +1,7 @@
 import {Button} from '@/components/ui/button';
 import {FiDownload} from 'react-icons/fi';
 import Social from "@/components/Social";
-import Photo from '@/components/Photo';
+import Photo2 from '@/components/Photo';
 import Stats from "@/components/Stats";
 import {useTranslations} from 'next-intl';
 
@@ -15,7 +15,7 @@ export default function Home() {
                         <span className={'text-xl'}>{t('position')}</span>
                         <h1 className={'h1 mb-6'}>{t('greeting')}<br/> <span
                             className={'text-accent'}>{t('name')}</span></h1>
-                        <p className={'max-w-[500px] mb-9 text-white/80'}>
+                        <p className={'max-w-[500px] mb-9 text-white/80 mx-auto xl:mx-0 px-2 sm:px-0'}>
                             {t('description')}
                         </p>
                         <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -32,15 +32,15 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={'order-1 xl:order-none mb-8 xl:mb-0'}>
-                        <Photo/>
+                        <Photo2/>
                     </div>
                 </div>
             </div>
             <Stats/>
-            <div className="mx-auto w-max mt-8">
+            <div className="mx-auto w-full max-w-max px-4 mt-8 flex justify-center">
                 <a href="https://stech-static.vercel.app/" target={'_blank'} rel="noopener noreferrer">
                     <Button>
-                        Demo Live Project
+                        {t('demoLiveProject')}
                     </Button>
                 </a>
             </div>

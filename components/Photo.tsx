@@ -26,7 +26,7 @@ export default function Photo() {
                             ease: 'easeInOut'
                         }
                     }}
-                    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute">
+                    className="w-full max-w-[298px] aspect-square xl:max-w-[498px] mix-blend-lighten absolute left-1/2 -translate-x-1/2 xl:left-auto xl:translate-x-0">
                     <Image src={'/assets/photo.png'} alt={''} priority quality={100} fill sizes={'100'}
                            className={'object-contain'}/>
                 </motion.div>

@@ -1,32 +1,26 @@
 export const links = [
     {
-        name: 'home',
-        vName: "trang chủ",
+        key: 'home',
         path: '/',
     },
     {
-        name: 'home 2',
-        vName: "trang chủ 2",
+        key: 'home2',
         path: '/home2',
     },
     {
-        name: 'services',
-        vName: "dịch vụ",
+        key: 'services',
         path: '/services',
     },
     {
-        name: 'resume',
-        vName: "hồ sơ năng lực",
+        key: 'resume',
         path: '/resume',
     },
     {
-        name: 'work',
-        vName: "dự án",
+        key: 'work',
         path: '/work',
     },
     {
-        name: 'contact',
-        vName: "liên hệ",
+        key: 'contact',
         path: '/contact',
     }
 ]

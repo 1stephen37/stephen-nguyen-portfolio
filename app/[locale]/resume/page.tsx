@@ -6,121 +6,47 @@ import {Tabs, TabsContent, TabsTrigger, TabsList} from '@/components/ui/tabs';
 import {Tooltip, TooltipTrigger, TooltipContent, TooltipProvider} from '@/components/ui/tooltip';
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {motion} from 'framer-motion';
+import {useTranslations} from 'next-intl';
 
-const about = {
-    title: "about me",
-    description: "I am a passionate Fullstack Developer trained at FPT Polytechnic, where I graduated with outstanding academic achievements. Over the years, I have actively participated in various programming competitions at both local and national levels, continuously honing my skills and embracing new technologies. My solid foundation and real-world experience allow me to deliver high-quality web solutions from front to back.",
-    info: [
-        {
-            fieldName: "Name",
-            fieldValue: "Stephen Nguyen",
-        },
-        {
-            fieldName: "Phone",
-            fieldValue: "(+84) 338 015 137",
-        },
-        {
-            fieldName: "Experience",
-            fieldValue: "4+ month",
-        },
-        {
-            fieldName: "Facebook",
-            fieldValue: "yahoo.Yasuo.09",
-        },
-        {
-            fieldName: "Nationality",
-            fieldValue: "Viet Nam",
-        },
-        {
-            fieldName: "Email",
-            fieldValue: "stephennguyendev97@gmail.com",
-        },
-        {
-            fieldName: "Freelance",
-            fieldValue: "Available",
-        },
-        {
-            fieldName: "Languages",
-            fieldValue: "English, VietNam",
-        }
-    ]
-}
+const experienceItems = [
+    {
+        key: 'tienPhong',
+        company: 'Tien Phong CDS',
+        duration: '9/2024 - 12/2024',
+    },
+] as const;
 
-const experience = {
-    icon: "/assets/resume/badge.svg",
-    title: "My experience",
-    items: [
-        {
-            company: "Tien Phong CDS",
-            position: "frontend developer",
-            duration: "9/2024 - 12/2024",
-            description: "Collaborated remotely with a development team to build a real-world project. Participated in regular online meetings to report progress and receive feedback from the client."
-        }
-    ]
-}
+const educationItems = [
+    {key: 'fpt', institution: 'FPT Polytechnic', duration: '2022 - 2025'},
+    {key: 'codeLearnJava', institution: 'CodeLearn', duration: '2023'},
+    {key: 'codeLearnC', institution: 'CodeLearn', duration: '2023'},
+] as const;
 
-const education = {
-    icon: "/assets/resume/cap.svg",
-    title: "My education",
-    items: [
-        {
-            institution: "FPT Polytechnic",
-            degree: "Website Development",
-            duration: "2022 - 2025"
-        },
-        {
-            institution: "CodeLearn",
-            degree: "Java basic",
-            duration: "2023"
-        },
-        {
-            institution: "CodeLearn",
-            degree: "C for beginners",
-            duration: "2023"
-        },
-    ]
-}
+const aboutFields = [
+    {fieldKey: 'name', value: 'Stephen Nguyen'},
+    {fieldKey: 'phone', value: '(+84) 338 015 137'},
+    {fieldKey: 'experience', valueKey: 'experience'},
+    {fieldKey: 'facebook', value: 'yahoo.Yasuo.09'},
+    {fieldKey: 'nationality', value: 'Viet Nam'},
+    {fieldKey: 'email', value: 'stephennguyendev97@gmail.com'},
+    {fieldKey: 'freelance', valueKey: 'freelance'},
+    {fieldKey: 'languages', valueKey: 'languages'},
+] as const;
 
-const skills = {
-    title: "My skills",
-    description: "My skills",
-    skillList: [
-        {
-            icon: <FaHtml5/>,
-            name: 'html 5'
-        },
-        {
-            icon: <FaCss3/>,
-            name: 'css 3'
-        },
-        {
-            icon: <FaJs/>,
-            name: 'javascript',
-        },
-        {
-            icon: <FaReact/>,
-            name: 'react.js'
-        },
-        {
-            icon: <SiNextdotjs/>,
-            name: 'next.js'
-        },
-        {
-            icon: <SiTailwindcss/>,
-            name: 'tailwind.css'
-        },
-        {
-            icon: <FaNodeJs/>,
-            name: 'node.js'
-        },
-        {
-            icon: <FaFigma/>,
-            name: 'figma'
-        },
-    ]
-}
+const skills = [
+    {icon: <FaHtml5/>, name: 'html 5'},
+    {icon: <FaCss3/>, name: 'css 3'},
+    {icon: <FaJs/>, name: 'javascript'},
+    {icon: <FaReact/>, name: 'react.js'},
+    {icon: <SiNextdotjs/>, name: 'next.js'},
+    {icon: <SiTailwindcss/>, name: 'tailwind.css'},
+    {icon: <FaNodeJs/>, name: 'node.js'},
+    {icon: <FaFigma/>, name: 'figma'},
+];
 
 export default function Page() {
+    const t = useTranslations('resume');
+
     return (
         <motion.div initial={{
             opacity: 0,
@@ -136,30 +62,30 @@ export default function Page() {
                 <Tabs defaultValue={'experience'} className={'flex flex-col xl:flex-row gap-[60px]'}>
                     <TabsList className={'flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6'}>
                         <TabsTrigger value={'experience'}>
-                            Experience
+                            {t('tabs.experience')}
                         </TabsTrigger>
                         <TabsTrigger value={'education'}>
-                            Education
+                            {t('tabs.education')}
                         </TabsTrigger>
                         <TabsTrigger value={'skills'}>
-                            Skills
+                            {t('tabs.skills')}
                         </TabsTrigger>
                         <TabsTrigger value={'about'}>
-                            About me
+                            {t('tabs.about')}
                         </TabsTrigger>
                     </TabsList>
                     <div className="min-h-[70vh] w-full">
                         <TabsContent value={'experience'} className={'w-full'}>
                             <div className="flex flex-col gap-[30px] text-center xl:text-left ">
-                                <h3 className={'text-4xl font-bold'}>{experience.title}</h3>
+                                <h3 className={'text-3xl sm:text-4xl font-bold'}>{t('experience.title')}</h3>
                                 <ScrollArea className={'h-[480px] '}>
                                     <ul className={'grid grid-cols-1 lg:grid-cols-2 gap-[30px] '}>
-                                        {experience.items.map((item, index) => (
+                                        {experienceItems.map((item, index) => (
                                             <li key={index}
                                                 className={'bg-[#232329] min-h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'}>
                                                 <span className={'text-accent'}>{item.duration}</span>
-                                                <h3 className={'text-xl max-w-[260px] min-h-[30px] text-center lg:text-left'}>{item.position}</h3>
-                                                <p className={'text-sm'}>{item.description}</p>
+                                                <h3 className={'text-xl max-w-[260px] min-h-[30px] text-center lg:text-left'}>{t(`experience.items.${item.key}.position`)}</h3>
+                                                <p className={'text-sm'}>{t(`experience.items.${item.key}.description`)}</p>
                                                 <div className={'flex items-center gap-3'}>
                                                     <span className={'w-[6px] h-[6px] rounded-full bg-accent'}></span>
                                                     <p className={'text-white/60'}>{item.company}</p>
@@ -172,14 +98,14 @@ export default function Page() {
                         </TabsContent>
                         <TabsContent value={'education'} className={'w-full'}>
                             <div className="flex flex-col gap-[30px] text-center xl:text-left ">
-                                <h3 className={'text-4xl font-bold'}>{education.title}</h3>
+                                <h3 className={'text-3xl sm:text-4xl font-bold'}>{t('education.title')}</h3>
                                 <ScrollArea className={'h-[480px] '}>
                                     <ul className={'grid grid-cols-1 lg:grid-cols-2 gap-[30px] '}>
-                                        {education.items.map((item, index) => (
+                                        {educationItems.map((item, index) => (
                                             <li key={index}
                                                 className={'bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'}>
                                                 <span className={'text-accent'}>{item.duration}</span>
-                                                <h3 className={'text-xl max-w-[260px] min-h-[30px] text-center lg:text-left'}>{item.degree}</h3>
+                                                <h3 className={'text-xl max-w-[260px] min-h-[30px] text-center lg:text-left'}>{t(`education.items.${item.key}.degree`)}</h3>
                                                 <div className={'flex items-center gap-3'}>
                                                     <span className={'w-[6px] h-[6px] rounded-full bg-accent'}></span>
                                                     <p className={'text-white/60'}>{item.institution}</p>
@@ -193,10 +119,10 @@ export default function Page() {
                         <TabsContent value={'skills'} className={'w-full'}>
                             <div className="flex flex-col gap-[30px]">
                                 <div className="flex flex-col gap-[30px] text-center xl:text-left ">
-                                    <h3 className={'text-4xl font-bold'}>{skills.title}</h3>
+                                    <h3 className={'text-3xl sm:text-4xl font-bold'}>{t('skills.title')}</h3>
                                 </div>
                                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                                    {skills.skillList.map((item, index) => (
+                                    {skills.map((item, index) => (
                                         <li key={index}>
                                             <TooltipProvider delayDuration={100}>
                                                 <Tooltip>
@@ -217,13 +143,15 @@ export default function Page() {
                         </TabsContent>
                         <TabsContent value={'about'} className={'w-full text-center xl:text-left'}>
                             <div className="flex flex-col gap-[30px]">
-                                <h3 className="text-4xl font-bold">{about.title}</h3>
-                                <p className="max-w-[600px] xl:max-w-[900px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                                <h3 className="text-3xl sm:text-4xl font-bold">{t('about.title')}</h3>
+                                <p className="max-w-[600px] xl:max-w-[900px] text-white/60 mx-auto xl:mx-0">{t('about.description')}</p>
                                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                                    {about.info.map((item, index) => (
+                                    {aboutFields.map((item, index) => (
                                         <li key={index} className={'flex items-center justify-center xl:justify-start gap-4'}>
-                                            <span className={'text-white/60'}>{item.fieldName}</span>
-                                            <span className={'text-xl'}>{item.fieldValue}</span>
+                                            <span className={'text-white/60'}>{t(`about.fields.${item.fieldKey}`)}</span>
+                                            <span className={'text-xl'}>
+                                                {'valueKey' in item ? t(`about.values.${item.valueKey}`) : item.value}
+                                            </span>
                                         </li>
                                     ))}
                                 </ul>

@@ -1,44 +1,35 @@
 'use client';
 import CountUp from "react-countup";
-import {usePathname} from "next/navigation";
+import {useTranslations} from 'next-intl';
 
 const stats = [
-    {
-        num: 3,
-        text: "Years of learning experience",
-        vText: "Năm học tập",
-    },
-    {
-        num: 2,
-        text: "Project completed",
-        vText: "Dự án hoàn thành",
-    },
-    {
-        num: 4,
-        text: "Technologies mastered",
-        vText: "Công nghệ thành thạo",
-    },
-    {
-        num: 1400,
-        text: "Code commits",
-        vText: "Lần cập nhật mã nguồn",
-    }
-]
+    {num: 3, key: 'yearsLearning'},
+    {num: 2, key: 'projectsCompleted'},
+    {num: 4, key: 'technologiesMastered'},
+    {num: 1400, key: 'codeCommits'},
+] as const;
 
 export default function Stats() {
-    const pathname = usePathname();
-
-    const parts = pathname.split('/');
-    const locale = parts[1] || 'vi';
+    const t = useTranslations('stats');
 
     return (
         <section className={'pt-4 pb-12 xl:pt-0 xl:pb-0'}>
             <div className="container">
-                <div className={'flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none'}>
-                    {stats.map((stat,index) => (
-                        <div key={index} className={'flex-1 flex gap-4 items-center justify-center xl:justify-start'}>
-                            <CountUp end={stat.num} duration={5} delay={2} className={'text-4xl xl:text-6xl font-extrabold'}/>
-                            <p className={`${stat.text.length < 15 ? 'max-w-[100px]' : 'max-w-[150px]'} leading-snug text-white/80`}>{locale === 'vi' ? stat.vText : stat.text}</p>
+                <div className="grid grid-cols-2 xl:grid-cols-4 gap-x-4 gap-y-8 sm:gap-x-8 xl:gap-6">
+                    {stats.map((stat, index) => (
+                        <div
+                            key={index}
+                            className="flex gap-3 sm:gap-4 items-center justify-start xl:justify-start min-w-0"
+                        >
+                            <CountUp
+                                end={stat.num}
+                                duration={5}
+                                delay={2}
+                                className="text-3xl sm:text-4xl xl:text-6xl font-extrabold shrink-0"
+                            />
+                            <p className="text-sm sm:text-base leading-snug text-white/80 min-w-0">
+                                {t(stat.key)}
+                            </p>
                         </div>
                     ))}
                 </div>

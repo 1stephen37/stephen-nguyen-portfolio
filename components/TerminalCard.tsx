@@ -1,16 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {useEffect, useMemo, useState} from "react";
+import {useTranslations} from 'next-intl';
 import TerminalLine from "@/components/TerminalLine";
 
-const lines = [
-    "$ npm run dev --mode=production",
-    "> Building for production...",
-    "> Server running on https://localhost:3000",
-    "> Ready for connections! 🚀",
-];
-
 export default function TerminalCard() {
+    const t = useTranslations('terminal');
+    const lines = useMemo(
+        () => [t('line1'), t('line2'), t('line3'), t('line4')],
+        [t]
+    );
+
     const [displayedLines, setDisplayedLines] = useState<string[]>([]);
     const [currentLine, setCurrentLine] = useState("");
     const [lineIndex, setLineIndex] = useState(0);
@@ -18,10 +18,17 @@ export default function TerminalCard() {
     const [started, setStarted] = useState(false);
 
     useEffect(() => {
-        // ⏳ delay 1.5s trước khi bắt đầu typing
+        setDisplayedLines([]);
+        setCurrentLine("");
+        setLineIndex(0);
+        setCharIndex(0);
+        setStarted(false);
+    }, [lines]);
+
+    useEffect(() => {
         const startTimer = setTimeout(() => setStarted(true), 1500);
         return () => clearTimeout(startTimer);
-    }, []);
+    }, [lines]);
 
     useEffect(() => {
         if (!started) return;
@@ -43,11 +50,10 @@ export default function TerminalCard() {
                 return () => clearTimeout(lineTimeout);
             }
         }
-    }, [charIndex, lineIndex, started]);
+    }, [charIndex, lineIndex, started, lines]);
 
     return (
         <div className="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden w-full border border-gray-700 font-mono text-sm text-green-400">
-            {/* Thanh tiêu đề */}
             <div className="flex items-center gap-2 px-4 py-2 bg-[#1e293b] text-gray-300">
                 <span className="w-3 h-3 rounded-full bg-red-500"></span>
                 <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
@@ -55,14 +61,13 @@ export default function TerminalCard() {
                 <span className="ml-3 text-sky-400">developer@terminal:~$</span>
             </div>
 
-            {/* Nội dung terminal */}
             <div className="px-4 py-3 bg-[#0f172a] min-h-[180px]">
                 {displayedLines.map((line, i) => (
-                    <TerminalLine key={i} text={line} />
+                    <TerminalLine key={i} text={line}/>
                 ))}
 
                 {started && lineIndex < lines.length && (
-                    <TerminalLine text={currentLine} cursor />
+                    <TerminalLine text={currentLine} cursor/>
                 )}
 
                 {started && lineIndex === lines.length && (
